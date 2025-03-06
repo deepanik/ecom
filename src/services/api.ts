@@ -9,7 +9,7 @@ export const getProducts = async (): Promise<Product[]> => {
     return response.data;
   } catch (error) {
     console.error('Error fetching products:', error);
-    return [];
+    throw error;
   }
 };
 
